@@ -1,0 +1,315 @@
+object frmMain: TfrmMain
+  Left = 526
+  Height = 600
+  Top = 217
+  Width = 962
+  Caption = 'Hilbert curves'
+  ClientHeight = 600
+  ClientWidth = 962
+  Constraints.MinHeight = 600
+  Constraints.MinWidth = 962
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poDefault
+  LCLVersion = '0.9.30'
+  object Panel1: TPanel
+    Left = 0
+    Height = 600
+    Top = 0
+    Width = 162
+    Align = alLeft
+    BevelOuter = bvNone
+    ClientHeight = 600
+    ClientWidth = 162
+    ParentColor = False
+    TabOrder = 0
+    object pbBackground: TPaintBox
+      Left = 0
+      Height = 62
+      Top = 536
+      Width = 162
+      OnPaint = pbBackgroundPaint
+    end
+    object PaintBox1: TPaintBox
+      Left = 96
+      Height = 25
+      Hint = 'Click here to change the color'
+      Top = 72
+      Width = 56
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ChangeCurveColorClick
+      OnPaint = PaintBox1Paint
+    end
+    object Button1: TButton
+      Left = 8
+      Height = 25
+      Top = 72
+      Width = 83
+      Caption = 'Draw curve 1'
+      OnClick = ButtonDrawClick
+      TabOrder = 1
+    end
+    object tbSpeed: TTrackBar
+      Left = 0
+      Height = 40
+      Hint = 'Move slider right to slow down the drawing process'
+      Top = 24
+      Width = 160
+      Max = 5
+      Position = 0
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Tag = 1
+      Left = 8
+      Height = 25
+      Top = 104
+      Width = 83
+      Caption = 'Draw curve 2'
+      OnClick = ButtonDrawClick
+      TabOrder = 2
+    end
+    object PaintBox2: TPaintBox
+      Tag = 1
+      Left = 96
+      Height = 25
+      Hint = 'Click here to change the color'
+      Top = 104
+      Width = 56
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ChangeCurveColorClick
+      OnPaint = PaintBox1Paint
+    end
+    object Button3: TButton
+      Tag = 2
+      Left = 8
+      Height = 25
+      Top = 136
+      Width = 83
+      Caption = 'Draw curve 3'
+      OnClick = ButtonDrawClick
+      TabOrder = 3
+    end
+    object PaintBox3: TPaintBox
+      Tag = 2
+      Left = 96
+      Height = 25
+      Hint = 'Click here to change the color'
+      Top = 136
+      Width = 56
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ChangeCurveColorClick
+      OnPaint = PaintBox1Paint
+    end
+    object Button4: TButton
+      Tag = 3
+      Left = 8
+      Height = 25
+      Top = 168
+      Width = 83
+      Caption = 'Draw curve 4'
+      OnClick = ButtonDrawClick
+      TabOrder = 4
+    end
+    object PaintBox4: TPaintBox
+      Tag = 3
+      Left = 96
+      Height = 25
+      Hint = 'Click here to change the color'
+      Top = 168
+      Width = 56
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ChangeCurveColorClick
+      OnPaint = PaintBox1Paint
+    end
+    object Button5: TButton
+      Tag = 4
+      Left = 8
+      Height = 25
+      Top = 200
+      Width = 83
+      Caption = 'Draw curve 5'
+      OnClick = ButtonDrawClick
+      TabOrder = 5
+    end
+    object PaintBox5: TPaintBox
+      Tag = 4
+      Left = 96
+      Height = 25
+      Hint = 'Click here to change the color'
+      Top = 200
+      Width = 56
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ChangeCurveColorClick
+      OnPaint = PaintBox1Paint
+    end
+    object Button6: TButton
+      Tag = 5
+      Left = 8
+      Height = 25
+      Top = 232
+      Width = 83
+      Caption = 'Draw curve 6'
+      OnClick = ButtonDrawClick
+      TabOrder = 6
+    end
+    object PaintBox6: TPaintBox
+      Tag = 5
+      Left = 96
+      Height = 25
+      Hint = 'Click here to change the color'
+      Top = 232
+      Width = 56
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ChangeCurveColorClick
+      OnPaint = PaintBox1Paint
+    end
+    object Button7: TButton
+      Tag = 6
+      Left = 8
+      Height = 25
+      Top = 264
+      Width = 83
+      Caption = 'Draw curve 7'
+      OnClick = ButtonDrawClick
+      TabOrder = 7
+    end
+    object PaintBox7: TPaintBox
+      Tag = 6
+      Left = 96
+      Height = 25
+      Hint = 'Click here to change the color'
+      Top = 264
+      Width = 56
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ChangeCurveColorClick
+      OnPaint = PaintBox1Paint
+    end
+    object Button8: TButton
+      Tag = 7
+      Left = 8
+      Height = 25
+      Top = 296
+      Width = 83
+      Caption = 'Draw curve 8'
+      OnClick = ButtonDrawClick
+      TabOrder = 8
+    end
+    object PaintBox8: TPaintBox
+      Tag = 7
+      Left = 96
+      Height = 25
+      Hint = 'Click here to change the color'
+      Top = 296
+      Width = 56
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ChangeCurveColorClick
+      OnPaint = PaintBox1Paint
+    end
+    object bbDrawAll: TBitBtn
+      Tag = 8
+      Left = 8
+      Height = 24
+      Top = 376
+      Width = 83
+      Caption = 'Draw all'
+      Kind = bkRetry
+      ModalResult = 4
+      OnClick = ButtonDrawClick
+      TabOrder = 9
+    end
+    object bbClearCanvas: TBitBtn
+      Left = 8
+      Height = 24
+      Top = 408
+      Width = 83
+      Caption = 'Clear'
+      Kind = bkCancel
+      ModalResult = 2
+      OnClick = bbClearCanvasClick
+      TabOrder = 10
+    end
+    object Label1: TLabel
+      Left = 8
+      Height = 17
+      Top = 8
+      Width = 38
+      Caption = 'Brake'
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object PaintBox9: TPaintBox
+      Tag = 8
+      Left = 96
+      Height = 25
+      Hint = 'Click here to change the color'
+      Top = 328
+      Width = 56
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ChangeCurveColorClick
+      OnPaint = PaintBox1Paint
+    end
+    object Button9: TButton
+      Tag = 8
+      Left = 8
+      Height = 25
+      Top = 328
+      Width = 83
+      Caption = 'Draw curve 9'
+      OnClick = ButtonDrawClick
+      TabOrder = 11
+    end
+  end
+  object pbCurve: TPaintBox
+    Left = 162
+    Height = 600
+    Top = 0
+    Width = 800
+    Align = alClient
+    Color = clGradientActiveCaption
+    ParentColor = False
+    OnPaint = pbCurvePaint
+    OnResize = pbCurveResize
+  end
+  object ColorDialog1: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 112
+    top = 376
+  end
+end
