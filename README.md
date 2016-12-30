@@ -1,2 +1,3 @@
 # HilbertCurve
-Demo program for creating a Hilbert curve with FPC
+Demo program for creating a Hilbert curve with FPC.
+Initial upload.
